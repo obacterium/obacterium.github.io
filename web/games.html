@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>杨胜钧个人网站</title>
+<style type="text/css">
+	body,td,th {
+	color: #000000;
+}
+	a:link {
+	color: #A2A2A7;
+	text-decoration: none;
+}
+	a:active {
+	color: #A2A2A7;
+	text-decoration: none;
+}
+	.relposition{
+		position: relative;
+		top:0;
+	}
+	.tableposition{
+		position: absolute;
+		padding: 10px;
+		width: 100%;
+	}
+	.imgposition{
+		position: absolute;
+		width: 100%;
+		top: 0;
+		z-index: 0;
+	}
+	.returnpage{
+		position: absolute;
+		left: 47.5%;
+		width: 5%;
+		bottom: -700px;
+		z-index: 10;
+	}
+	.buttonposition{
+		position: relative;
+		left: 25%;
+		width: 50%;
+	}
+	.textposition{
+		position: relative;
+		font-size: 20px;
+		font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+		text-align: center;
+	}	
+	
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+<div class="relposition">
+  <div class="returnpage">
+						<a width="100%" href="../index.html">
+							返回主页
+						</a>
+  </div>
+  <img id="background" src="../image/contact_background.png" class="imgposition" alt="">
+		<table class="tableposition" border="0">
+			<tbody>
+				<tr>
+					<td width="50%"><div class="buttonposition" id="button1">
+						<img src="../image/Minecraft_button.jpg" alt="minecraft" width="100%">
+						</div></td>
+					<td width="50%"><div class="buttonposition" id="button2">
+						<img src="../image/wows_button.png" alt="wows" width="100%">
+						</div></td>
+				</tr>
+				<tr>
+					<td width="50%"><div class="textposition"><a href="https://minecraft.net">Minecraft</a></div></td>
+					<td width="50%"><div class="textposition"><a href="https://asia.wargaming.net/en/games/wows">World of Warships</a></div></td>
+				</tr>
+				<tr>
+					<td width="50%"><div class="buttonposition" id="button3">
+						<img src="../image/Stellaris_button.jpg" alt="stellaris" width="100%">
+						</div></td>
+					<td width="50%"><div class="buttonposition" id="button4">
+						<img src="../image/DSP_button.jpg" alt="Dyson Sphere Program" width="100%">
+						</div></td>
+				</tr>
+				<tr>
+					<td width="50%"><div class="textposition"><a href="https://www.paradoxinteractive.com/games/stellaris/about">Stellaris</a></div></td>
+					<td width="50%"><div class="textposition"><a href="https://wiki.biligame.com/dsp/%E9%A6%96%E9%A1%B5">Dyson Sphere Program</a></div></td>
+				</tr>
+		  </tbody>
+  </table>
+</div>
+	<script>
+		var myimg=document.getElementById('background');
+		var buttons=document.querySelectorAll('.buttonposition');
+		buttons.forEach(function(anim){
+			anim.addEventListener('mouseenter',function(){
+				anim.style.transition = 'transform 0.5s';
+				anim.style.transform = 'scale(1.2)';
+			});
+			anim.addEventListener('mouseleave',function(){
+				anim.style.transform = 'scale(1.0)';
+			});
+		});
+		buttons.forEach(function(bgi){
+			bgi.addEventListener('click',function(){
+				switch(bgi.id){
+					case 'button1':
+						myimg.src='../image/Minecraft.png';
+						break;
+					case 'button2':
+						myimg.src='../image/wows.jpg';
+						break;
+					case 'button3':
+						myimg.src='../image/Stellaris.jpg';
+						break;
+					case 'button4':
+						myimg.src='../image/DSP.jpg';
+						break;
+					default:
+						break;
+				}
+			});
+		});
+	</script>
+</body>
+</html>

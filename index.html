@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>杨胜钧个人网站</title>
+<style type="text/css">
+body,td,th {
+	color: #000000;
+}
+a:link {
+	color: #1122DD;
+}
+a:active {
+	color: #D90F12;
+}
+	@keyframes move {
+    0% { transform: translateY(-50);opacity: 0; } 
+    50% { transform: translateY(-25);opacity: 0.5; } 
+    100% { transform: translateY(0);opacity: 1;  } 
+  }
+	
+	.position_rel{
+		position: relative;
+	}
+	.positioned {
+    	position: absolute;
+    	left: 10%;
+		bottom: 10%;
+		animation: move 1s ease-in-out;
+	}
+	.titleposition{
+		position: absolute;
+		left: 10%;
+		top:30%;
+		animation: move 1s ease-in-out;
+	}
+	.iconposition{
+		position: absolute;
+		right: -10%;
+		top:30%;
+	}
+	.eggposition{
+		position: absolute;
+		width: 5%;
+		height: 5%;
+		left: 30%;
+		top: 50%;
+	}
+	.imageposition_1{
+		position: relative;
+		left: 0%;
+		right: 20%;
+		width: 80%;
+	}
+	.imageposition_2{
+		position: relative;
+		left: 20%;
+		right: 0%;
+		width: 80%;
+	}
+	
+	
+</style>
+</head>
+<body>
+<table width="100%" border="0" class="position_rel">
+  <tbody>
+    <tr>
+    	<td>
+		  <img src="image/background.png" width ="100%" alt="mypage" >
+			<img src="image/index-title.png" width="40%" alt="mytitle" class="titleposition">
+			<div class="iconposition">
+				<img src="image/image_1.png" width="50%" alt="myicon">
+				<a class="eggposition" href="web/egg.html"></a>
+			</div>
+			<table width="50%" border="0" class="positioned" padding:10%>
+				<tbody>
+					<tr>
+						<td>
+							<a href="https://bilibili.com" ><img src="image/button_1.png" width ="100%" alt="mypage" class="imageposition_1"></a>
+						</td>
+						<td>
+							<a href="web/my-contacts.html"><img src="image/button_4.png" width ="95%" alt="mypage" class="imageposition_2"></a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="https://passing666.github.io/CS2405"><img src="image/button_2.png" width ="100%" alt="mypage" class="imageposition_1"></a>
+						</td>
+						<td>
+							<a href="web/MyMusics.html"><img src="image/button_5.png" width ="100%" alt="mypage" class="imageposition_2"></a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="image/button_3.png" width="100%" alt="mypage" class="imageposition_1">
+						</td>
+						<td>
+							<a href="web/games.html"><img src="image/button_6.png" width="100%" alt="mybutton" class="imageposition_2"></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+    </tr>
+  </tbody>
+	
+</table>
+	
+
+	
+
+</body>
+</html>

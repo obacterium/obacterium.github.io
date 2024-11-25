@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>杨胜钧个人网站</title>
+<style type="text/css">
+	body,td,th {
+	color: #000000;
+}
+	a:link {
+	color: #1122DD;
+}
+	a:active {
+	color: #D90F12;
+}
+	@keyframes break{
+		0% {transform: translateX(0) translateY(0) rotate(0);}
+		50%{transform: translateX(250px) translateY(-500px) rotate(45deg);}
+		100%{transform: translateX(500px) translateY(0) rotate(90deg);}
+	}
+	
+	@keyframes fadein{
+		0% {opacity: 0;}
+		100% {opacity: 1;}
+	}
+	.relposition{
+		position: relative;
+	}
+	.position0{
+		position: absolute;
+		bottom: 20px;
+		width: 40%;
+		left: 30%;
+	}
+	.position1{
+		position: absolute;
+		bottom: 25px;
+		width: 40%;
+		left: 30%;
+		animation: break 3s ease;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+		z-index: 1;
+	}
+	.text{
+		position: absolute;
+		bottom: 500px;
+		width: 60%;
+		left: 30%;
+		color: #E80E12;
+		font-size: 40px;
+		opacity: 0;
+		animation: fadein 0.5s;
+		animation-delay: 4.5s;
+		animation-fill-mode: forwards;
+		z-index: 0;
+	}
+</style>
+</head>
+<body>
+	<div class="position0"><img alt="egg0" src="../image/egg-3.png"></div>
+	<div class="position1"><img alt="egg1" src="../image/egg-2.png"></div>
+	<div class="text">恭喜您发现了彩蛋！</div>
+	
+</body>
+</html>

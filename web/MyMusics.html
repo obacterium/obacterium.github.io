@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我喜欢的音乐</title>
+<style type="text/css">
+body,td,th {
+	color: #000000;
+}
+	a:link {
+	color: #1122DD;
+}
+	a:active {
+	color: #D90F12;
+}
+	.relposition{
+		position: relative;
+		width: 100%;
+		color: #93AF84;
+		font-size: 20px;
+	}
+	.tablesposition{
+		position: absolute;
+		width: 20%;
+		left: 10%;
+		top:10%;
+	}
+	.eleposition{
+		position: relative;
+		left: 0;
+		top:0;
+	}
+	.imgposition0{
+		position: absolute;
+		width: 100%;
+	}
+	.imgposition1{
+		position: absolute;
+		width: 10%;
+		left: 45%;
+		top: 20%;
+	}
+	.returnposition{
+		position: absolute;
+		width: 5%;
+		left: 5%;
+		top: 50%;
+	}
+</style>
+</head>
+<body>
+	<div class="relposition">
+		<img src="../image/contact_background.png" alt="background" class="imgposition0">
+		<table class="tablesposition" border="0">
+			<tbody>
+				<tr>
+					<div class="eleposition">我还年轻 我还年轻<br>
+					<audio controls  id="audio1">
+						<source src="../musics/我还年轻 我还年轻.mp3" type="audio/mpeg">
+					</audio>
+					</div>
+					
+				</tr>
+					
+				<tr>
+					<div class="eleposition">aLIEz<br>
+						<audio controls id="audio2">
+							<source src="../musics/aLIEz.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+				</tr>
+				
+				<tr>
+					<div class="eleposition" >杀死那个石家庄人<br>
+						<audio controls id="audio3">
+							<source src="../musics/杀死那个石家庄人.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+				</tr>
+				
+				<tr>
+					<div class="eleposition">Небо(天空)<br>
+						<audio controls  id="audio4">
+							<source src="../musics/Небо.m4a" type="audio/mp4">
+						</audio>
+					</div>
+				</tr>
+				
+				<tr>
+					<div class="eleposition">Higher<br>
+						<audio controls id="audio5">
+							<source src="../musics/Higher.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+				</tr>
+				
+				<tr>
+					<div class="eleposition">Nevada<br>
+						<audio controls id="audio6">
+							<source src="../musics/Nevada.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+				</tr>
+				
+				<tr>
+					<div class="eleposition">走歌人<br>
+						<audio controls id="audio7">
+							<source src="../musics/走歌人.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+				</tr>
+				
+				<tr>
+					<div class="eleposition">星空<br>
+						<audio controls id="audio8">
+							<source src="../musics/星空.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="relposition">
+		<img alt="请播放一首歌曲！" class="imgposition1" id="Myimage">
+		<a class="returnposition" href="../index.html"><img src="../image/return.jpg" width="100%"></a>
+	</div>
+	<script>
+		var audioElements = document.querySelectorAll('audio');
+	var myimg = document.getElementById('Myimage');
+
+	// 为每个音频元素添加事件监听器
+	audioElements.forEach(function(audio) {
+		audio.addEventListener('play', function() {
+			// 根据音频元素的ID改变图片
+			switch (audio.id) {
+				case 'audio1':
+					myimg.src = '../image/audio1.jpg';
+					break;
+				case 'audio2':
+					myimg.src = '../image/audio2.jpg'; 
+					break;
+				case 'audio3':
+					myimg.src = '../image/audio3.jpg'; 
+					break;
+				case 'audio4':
+					myimg.src = '../image/audio4.jpg'; 
+					break;
+				case 'audio5':
+					myimg.src = '../image/audio5.jpg';
+					break;
+				case 'audio6':
+					myimg.src = '../image/audio6.jpg'; 
+					break;
+				case 'audio7':
+					myimg.src = '../image/audio7.jpg'; 
+					break;
+				case 'audio8':
+					myimg.src = '../image/audio8.jpg'; 
+					break;
+				default:
+					
+					break;
+			}
+		});
+
+		});
+	</script>
+</body>
+</html>
